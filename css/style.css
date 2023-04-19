@@ -1,0 +1,173 @@
+:root {
+    /* colors */
+    --main-text-color: #fff;
+
+    /* font */
+    /* --fonts: Arial, Helvetica, sans-serif;  */
+    --fonts: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* background */
+    --accent-color: #00B373;
+    --main-background: lightgray;
+    --second-background: #9CB0A4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--fonts);
+    font-size: 1px;
+}
+
+header {
+    margin-bottom: 50px;
+    padding: 20rem 0;
+    font-size: 20rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    background: var(--second-background);
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+
+section {
+    margin-bottom: 75rem;
+    padding: 20px;
+    transition: .5s;
+}
+
+/* section:last-child {
+    margin-bottom: 0;
+} */
+
+section:hover {
+    background: rgba(0, 0, 0, .075);
+    border-radius: 5px;
+}
+section:hover .section-title::before,
+section:hover .section-title::after {
+    background: var(--accent-color);
+}
+
+.section-title {
+    margin-bottom: 25rem;
+    position: relative;
+    text-align: center;
+    font-size: 25rem;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    width: 35%;
+    background: var(--second-background);
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.section-title::before {
+    left: 0;
+}
+
+.section-title::after {
+    right: 0;
+}
+
+.primary-btn {
+    background: var(--main-background);
+    transition: .5s;
+    border: 2px solid var(--main-background);
+}
+
+.primary-btn:hover {
+    color: var(--main-text-color);
+    background: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+.primary-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: block;
+}
+
+select,
+textarea,
+input {
+    padding: 5rem 10rem;
+    font-family: var(--fonts);
+    border: 2px solid var(--main-background);
+    border-radius: 5px;
+    resize: none;
+}
+
+select:focus,
+textarea:focus,
+input:focus {
+    border: 2px solid var(--accent-color);
+    outline: none;
+}
+
+.half-block {
+    text-align: center;
+    width: 50%;
+}
+
+.third-block {
+    width: 33%;
+}
+
+.third-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.third-block:nth-child(2) label {
+    margin-bottom: 20rem;
+    width: 225rem;
+}
+.third-block:nth-child(2) input,
+.third-block:nth-child(2) select,
+.third-block:nth-child(2) .primary-btn {
+    width: 100%;
+}
+
+.third-block:nth-child(2) label:last-child {
+    margin-bottom: 0;
+}
+
+/* ------------------- */
+/*    sparta-cipher    */
+/* ------------------- */
+
+.sparta-decryption-conteiner {
+    max-height: 350rem;
+    overflow-y: auto;
+}
+
+.sparta-decryption-conteiner p {
+    margin-bottom: 15rem;
+    font-size: 14rem;
+}
+
+.sparta-decryption-conteiner p:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptology</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <p>Cryptology</p>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <!-- <div class="prec-tasks"></div> -->
+            <section class="sparta-cipher">
+                <h2 class="section-title">Sparta Cipher</h2>
+
+                <form action="#" method="GET" class="primary-form">
+                    <div class="third-block">
+                        <label><textarea id="sparta-input-textarea" cols="30" rows="10"
+                                placeholder="Your text"></textarea></label>
+                    </div>
+                    <div class="third-block">
+                        <label><input type="number" id="sparta-row-number" placeholder="Number of rows"></label>
+                        <label><input type="number" id="sparta-col-number" placeholder="Number of columns"></label>
+                        <label>
+                            <select id="sparta-type-select">
+                                <option value="encrypt_decipher">encrypt or decipher message</option>
+                                <option value="decode">decode a message</option>
+                            </select>
+                        </label>
+                        <label><input type="button" id="sparta-submit-btn" class="primary-btn"
+                                value="Translate it"></label>
+                    </div>
+                    <div class="third-block">
+                        <label><textarea id="sparta-output-textarea" cols="30" rows="10" placeholder="Result"
+                                disabled></textarea></label>
+                    </div>
+                </form>
+                
+                <div class="sparta-decryption-conteiner"></div>
+            </section>
+
+            <section class="athena-cipher">
+                <h2 class="section-title">Athena Cipher</h2>
+
+                <form action="#" method="GET" class="primary-form">
+                    <div class="third-block">
+                        <label><textarea id="athena-input-textarea" cols="30" rows="10"
+                                placeholder="Your text"></textarea></label>
+                    </div>
+                    <div class="third-block">
+                        <label><input type="number" id="athena-key-one" placeholder="Enter the first key"></label>
+                        <label><input type="number" id="athena-key-two" placeholder="Enter the second key"></label>
+                        <label>
+                            <select id="athena-type-select">
+                                <option value="encrypt" selected>encrypt message</option>
+                                <option value="decipher">decipher message</option>
+                                <option value="decode">decode a message</option>
+                            </select>
+                        </label>
+                        <label><input type="button" id="athena-submit-btn" class="primary-btn"
+                                value="Translate it"></label>
+                    </div>
+                    <div class="third-block">
+                        <label><textarea id="athena-output-textarea" cols="30" rows="10" placeholder="Result"
+                                disabled></textarea></label>
+                    </div>
+                </form>
+                
+                <div class="athena-decryption-conteiner"></div>
+            </section>
+
+            <!-- labs -->
+            <section class="сaesar-cipher">
+                <h2 class="section-title">Caesar Cipher</h2>
+
+                <form action="#" method="GET" class="primary-form">
+                    <div class="third-block">
+                        <label><textarea id="сaesar-input-textarea" cols="30" rows="10"
+                                placeholder="Your text"></textarea></label>
+                    </div>
+                    <div class="third-block">
+                        <label><input type="number" id="сaesar-key-one" placeholder="Enter the key"></label>
+                        <label>
+                            <select id="сaesar-type-select">
+                                <option value="encrypt" selected>encrypt message</option>
+                                <option value="decipher">decipher message</option>
+                                <option value="decode">decode a message</option>
+                            </select>
+                        </label>
+                        <label><input type="button" id="сaesar-submit-btn" class="primary-btn" value="Translate it"></label>
+                    </div>
+                    <div class="third-block">
+                        <label><textarea id="сaesar-output-textarea" cols="30" rows="10" placeholder="Result" disabled></textarea></label>
+                    </div>
+                </form>
+                
+                <div class="сaesar-decryption-conteiner"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- prac -->
+    <script src="js/Classes/Practical/SpartaCipher.js"></script> <!-- 1 -->
+    <script src="js/Classes/Practical/AthenaCipher.js"></script> <!-- 2 -->
+    <script src="js/Classes/Practical/PlayferCipher.js"></script> <!-- 3 -->
+
+    <!-- lab -->
+    <script src="js/Classes/Laboratory/СipherСaesar.js"></script> <!-- 1 -->
+    <script src="js/Classes/Laboratory/SubstitutionCipher.js"></script> <!-- 2 -->
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
