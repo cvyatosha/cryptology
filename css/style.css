@@ -167,3 +167,9 @@ input:focus {
 .decryption-conteiner p:last-child {
     margin-bottom: 0;
 }
+
+/* kasisky-cipher */
+.kasisky-cipher .section-title::before,
+.kasisky-cipher .section-title::after {
+    width: 15%;
+}

@@ -131,6 +131,33 @@
                 
                 <div class="substitution-decryption-conteiner decryption-conteiner"></div>
             </section>
+
+            <section class="kasisky-cipher">
+                <h2 class="section-title">Wigener cipher using the Kasisky method</h2>
+
+                <form action="#" method="GET" class="primary-form">
+                    <div class="third-block">
+                        <label><textarea id="kasisky-input-textarea" cols="30" rows="10"
+                                placeholder="Your text"></textarea></label>
+                    </div>
+                    <div class="third-block">
+                        <label><input type="text" id="kasisky-key-one" placeholder="Enter the key"></label>
+                        <label>
+                            <select id="kasisky-type-select">
+                                <option value="encrypt" selected>encrypt message</option>
+                                <option value="decipher">decipher message</option>
+                                <option value="decode">decode a message</option>
+                            </select>
+                        </label>
+                        <label><input type="button" id="kasisky-submit-btn" class="primary-btn" value="Translate it"></label>
+                    </div>
+                    <div class="third-block">
+                        <label><textarea id="kasisky-output-textarea" cols="30" rows="10" placeholder="Result" disabled></textarea></label>
+                    </div>
+                </form>
+                
+                <div class="kasisky-decryption-conteiner decryption-conteiner"></div>
+            </section>
         </div>
     </main>
 
@@ -142,6 +169,7 @@
     <!-- lab -->
     <script src="js/Classes/Laboratory/СipherСaesar.js"></script> <!-- 1 -->
     <script src="js/Classes/Laboratory/SubstitutionCipher.js"></script> <!-- 2 -->
+    <script src="js/Classes/Laboratory/KasiskyCipher.js"></script> <!-- 3 -->
 
 
     <script src="js/index.js"></script>
