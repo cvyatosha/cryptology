@@ -154,20 +154,16 @@ input:focus {
     margin-bottom: 0;
 }
 
-/* ------------------- */
-/*    sparta-cipher    */
-/* ------------------- */
-
-.sparta-decryption-conteiner {
+.decryption-conteiner {
     max-height: 350rem;
     overflow-y: auto;
 }
 
-.sparta-decryption-conteiner p {
+.decryption-conteiner p {
     margin-bottom: 15rem;
     font-size: 14rem;
 }
 
-.sparta-decryption-conteiner p:last-child {
+.decryption-conteiner p:last-child {
     margin-bottom: 0;
 }

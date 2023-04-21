@@ -44,7 +44,7 @@
                     </div>
                 </form>
                 
-                <div class="sparta-decryption-conteiner"></div>
+                <div class="sparta-decryption-conteiner decryption-conteiner"></div>
             </section>
 
             <section class="athena-cipher">
@@ -102,7 +102,34 @@
                     </div>
                 </form>
                 
-                <div class="сaesar-decryption-conteiner"></div>
+                <div class="сaesar-decryption-conteiner decryption-conteiner"></div>
+            </section>
+
+            <section class="substitution-cipher">
+                <h2 class="section-title">Substitution Cipher</h2>
+
+                <form action="#" method="GET" class="primary-form">
+                    <div class="third-block">
+                        <label><textarea id="substitution-input-textarea" cols="30" rows="10"
+                                placeholder="Your text"></textarea></label>
+                    </div>
+                    <div class="third-block">
+                        <!-- <label><input type="number" id="substitution-key-one" placeholder="Enter the key"></label> -->
+                        <label>
+                            <select id="substitution-type-select">
+                                <option value="encrypt" selected>encrypt message</option>
+                                <option value="decipher">decipher message</option>
+                                <option value="decode">decode a message</option>
+                            </select>
+                        </label>
+                        <label><input type="button" id="substitution-submit-btn" class="primary-btn" value="Translate it"></label>
+                    </div>
+                    <div class="third-block">
+                        <label><textarea id="substitution-output-textarea" cols="30" rows="10" placeholder="Result" disabled></textarea></label>
+                    </div>
+                </form>
+                
+                <div class="substitution-decryption-conteiner decryption-conteiner"></div>
             </section>
         </div>
     </main>

@@ -31,8 +31,6 @@ class SpartaCipher {
 
     decryption(user_message, dec_container) // whithout key
     {
-
-        console.log(3);
         let result_message = [],
             message_letters = user_message.toLowerCase().match(/\w/g);
 

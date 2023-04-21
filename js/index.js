@@ -96,7 +96,7 @@ document.querySelector('#сaesar-submit-btn').onclick = () => {
 
     if (type == 'decode') {
         document.querySelector('#сaesar-output-textarea').value = 'Go down to see all combinations';
-        console.log(сaesar.decryption(messege));
+        сaesar.decryption(messege, document.querySelector('.сaesar-decryption-conteiner'));
     }
 
     if (type == 'encrypt' || type == 'decipher') {
@@ -104,17 +104,27 @@ document.querySelector('#сaesar-submit-btn').onclick = () => {
     }
 }
 
-// // lb2
-// let substitution_cipher_encrypt = 'The quick brown fox jumps over the lazy dog. It barked',
-//     substitution_cipher_decipher_with_key = 'HES XBLYA OZJFR IJT UBCWN JQSZ HES VGKM DJP. LH OGZASD',
-//     substitution_cipher_decipher = 'computer science, the study of computers and computing, including their theoretical and algorithmic foundations, hardware and software, and their uses for processing information. The discipline of computer science includes the study of algorithms and data structures, computer and network design, modeling data and information processes, and artificial intelligence. Computer science draws some of its foundations from mathematics and engineering and therefore incorporates techniques from areas such as queueing theory, probability and statistics, and electronic circuit design. Computer science also makes heavy use of hypothesis testing and experimentation during the conceptualization, design, measurement, and refinement of new algorithms, information structures, and computer architectures. Computer science is considered as part of a family of five separate yet interrelated disciplines: computer engineering, computer science, information systems, information technology, and software engineering. This family has come to be known collectively as the discipline of computing. These five disciplines are interrelated in the sense that computing is their object of study, but they are separate since each has its own research perspective and curricular focus.',
-//     сaesar = new SubstitutionCipher;
+// -------------------------------------
+//            substitution-cipher lb2
+// -------------------------------------
+// encrypt = 'The quick brown fox jumps over the lazy dog. It barked',
+// decipher = 'HES XBLYA OZJFR IJT UBCWN JQSZ HES VGKM DJP. LH OGZASD',
 
-//     // console.log(сaesar.procedure(substitution_cipher_encrypt, 'encrypt'));
-//     // console.log(сaesar.procedure(substitution_cipher_decipher_with_key, 'decipher'));
 
-//     console.log(сaesar.decryption(substitution_cipher_decipher));
+document.querySelector('#substitution-submit-btn').onclick = () => {
+    let messege = document.querySelector('#substitution-input-textarea').value,
+        type = document.querySelector('#substitution-type-select').value;
 
+    if (type == 'decode') {
+        document.querySelector('#substitution-output-textarea').value = 'Go down to see all combinations';
+        //let substitution_cipher_decipher = 'computer science, the study of computers and computing, including their theoretical and algorithmic foundations, hardware and software, and their uses for processing information. The discipline of computer science includes the study of algorithms and data structures, computer and network design, modeling data and information processes, and artificial intelligence. Computer science draws some of its foundations from mathematics and engineering and therefore incorporates techniques from areas such as queueing theory, probability and statistics, and electronic circuit design. Computer science also makes heavy use of hypothesis testing and experimentation during the conceptualization, design, measurement, and refinement of new algorithms, information structures, and computer architectures. Computer science is considered as part of a family of five separate yet interrelated disciplines: computer engineering, computer science, information systems, information technology, and software engineering. This family has come to be known collectively as the discipline of computing. These five disciplines are interrelated in the sense that computing is their object of study, but they are separate since each has its own research perspective and curricular focus.',
+        console.log(substitution.decryption(substitution_cipher_decipher));
+    }
+
+    if (type == 'encrypt' || type == 'decipher') {
+        document.querySelector('#substitution-output-textarea').value = substitution.procedure(messege, type);
+    }
+}
 
 
 //---------------------------------

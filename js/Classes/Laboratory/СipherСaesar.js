@@ -8,19 +8,19 @@ class СipherСaesar
     
     procedure(message, key, type)// with key
     {
-        let message_user = message.toUpperCase(),
-            result_message = '',
-            messageLetters = message_user.match(/[a-zA-Z\s\.\,]/g);
+        let result_message = '',
+            messageLetters = message.toUpperCase().match(/[a-zA-Z\s\.\,]/g);
+
             
         for (let i = 0; i < messageLetters.length; i++) {
             let letterIndex = this.alphabet.indexOf(messageLetters[i]);
             
             if (letterIndex != -1) {
                 if (type == 'encrypt') {
-                    if (letterIndex + key >= this.alphabet.length) {
-                        letterIndex = Math.abs(this.alphabet.length - (letterIndex + key));
+                    if (Number(letterIndex) + Number(key) >= this.alphabet.length) {
+                        letterIndex = Math.abs(this.alphabet.length - (Number(letterIndex) + Number(key)));
                     } else {
-                        letterIndex += key;  
+                        letterIndex = Number(letterIndex) + Number(key);  
                     }
                 } else if (type == 'decipher') {
                     if (letterIndex - key < 0 ) {
@@ -43,7 +43,7 @@ class СipherСaesar
         return result_message;
     }
 
-    decryption(message, key_length = this.alphabet.length - 1)// whithout key
+    decryption(message, dec_container, key_length = this.alphabet.length - 1)// whithout key
     {
         let decode_message = message.toUpperCase(),
         messageLetters = decode_message.match(/[a-zA-Z\s\.\,]/g),
@@ -66,10 +66,12 @@ class СipherСaesar
                 result_message += this.alphabet[letterIndex];
             }
 
-            result_messages.push(result_message);
+            let html_p = document.createElement('p');
+
+                html_p.innerHTML = 'key - ' + key_count + ': ' + result_message;
+                dec_container.append(html_p);
+
             key_count++;
         }
-
-        return result_messages;
     }
 }
