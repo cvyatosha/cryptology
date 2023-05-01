@@ -43,7 +43,7 @@ class СipherСaesar
         return result_message;
     }
 
-    decryption(message, dec_container, key_length = this.alphabet.length - 1)// whithout key
+    decryption(message, dec_container, key_length = this.alphabet.length - 1)// without key
     {
         let decode_message = message.toUpperCase(),
         messageLetters = decode_message.match(/[a-zA-Z\s\.\,]/g),
