@@ -10,6 +10,7 @@ let сaesar = new СipherСaesar(), // lb 1
     substitution = new SubstitutionCipher(), // lb 2
     kasisky = new KasiskyCipher(), // lb 3
     randGen = new RandGenCipher(); // lb 4
+sdes = new SdesCipher(); // lb 5
 
 // ####################################################
 //      TRANSLATE MESSAGE WITH CHOOSEN CIPHER prack
@@ -148,7 +149,7 @@ document.querySelector('#kasisky-submit-btn').onclick = () => {
 }
 
 // -------------------------------------
-//            kasisky-cipher lb3
+//            kasisky-cipher lb4
 // -------------------------------------
 // a - 7
 // c - 7
@@ -170,7 +171,34 @@ document.querySelector('#kasisky-submit-btn').onclick = () => {
 // }
 
 // console.log(randGen.procedure(7, 7, 7, 10, 10));
-console.log(randGen.procedure());
+// console.log(randGen.procedure());
+
+
+// -------------------------------------
+//            kasisky-cipher lb5
+// -------------------------------------
+// a - 7
+// c - 7
+// m - 10
+
+// document.querySelector('#kasisky-submit-btn').onclick = () => {
+//     let messege = document.querySelector('#kasisky-input-textarea').value,
+//         key = document.querySelector('#kasisky-key-one').value,
+//         type = document.querySelector('#kasisky-type-select').value;
+
+//     if (type == 'decode') {
+//         document.querySelector('#kasisky-output-textarea').value = 'Go down to see all combinations';
+//         console.log(kasisky.decryption(messege));
+//     }
+
+//     if (type == 'encrypt' || type == 'decipher') {
+//         document.querySelector('#kasisky-output-textarea').value = kasisky.procedure(messege, key, type);
+//     }
+// }
+
+console.log(sdes.procedure(1, '1010000010'));
+
+
 
 //---------------------------------
 // kalkicode.com 
